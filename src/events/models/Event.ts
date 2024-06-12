@@ -10,13 +10,12 @@ export interface IEvent extends Document {
 }
 
 const EventSchema: Schema = new Schema({
-  id: { type: Number, required: true, unique: true },
+  id: { type: String, required: true, unique: true },
   name: { type: String, required: true },
-  description: { type: String, required: true },
+  description: { type: String},
   date: { type: String, required: true },
   location: { type: String, required: true },
-  duration: { type: String, required: true },
+  duration: { type: String},
 });
-const EventModel = mongoose.model<IEvent>('Event', EventSchema);
 
-export default EventModel;
+export default mongoose.model<IEvent>('Event', EventSchema);
