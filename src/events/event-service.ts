@@ -1,6 +1,6 @@
 import { CreateEventDto } from './dtos/CreateEvent.dot';
 import { Event } from './types/response';
-import EventModel, { IEvent } from './models/event';
+import EventModel, { IEvent } from './models/Event';
 import mongoose from 'mongoose';
 
 
